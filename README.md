@@ -37,9 +37,9 @@ is the mean ± std over three runs (%). Lower is better, except for K-acc.
 
 | Front-end | JI | JER | Known | Varied | Unknown | K-acc |
 |---|---|---|---|---|---|---|
-| WavLM-Large (default) | 8.32 ± 0.40 | 16.71 ± 0.29 | 9.61 ± 0.35 | 8.80 ± 0.33 | 23.58 ± 0.50 | 87.42 ± 0.11 |
-| XLS-R 300M | 10.77 ± 1.74 | 19.60 ± 1.60 | 7.94 ± 0.19 | 10.18 ± 0.70 | 28.69 ± 2.75 | 82.27 ± 2.44 |
-| wav2vec 2.0 Large (3C front-end) | 11.56 ± 0.39 | 21.90 ± 0.56 | 12.26 ± 0.68 | 12.77 ± 0.66 | 30.25 ± 0.47 | 84.53 ± 1.20 |
+| WavLM-Large (default) | 8.32&nbsp;±&nbsp;0.40 | 16.71&nbsp;±&nbsp;0.29 | 9.61&nbsp;±&nbsp;0.35 | 8.80&nbsp;±&nbsp;0.33 | 23.58&nbsp;±&nbsp;0.50 | 87.42&nbsp;±&nbsp;0.11 |
+| XLS-R 300M | 10.77&nbsp;±&nbsp;1.74 | 19.60&nbsp;±&nbsp;1.60 | 7.94&nbsp;±&nbsp;0.19 | 10.18&nbsp;±&nbsp;0.70 | 28.69&nbsp;±&nbsp;2.75 | 82.27&nbsp;±&nbsp;2.44 |
+| wav2vec 2.0 Large (3C front-end) | 11.56&nbsp;±&nbsp;0.39 | 21.90&nbsp;±&nbsp;0.56 | 12.26&nbsp;±&nbsp;0.68 | 12.77&nbsp;±&nbsp;0.66 | 30.25&nbsp;±&nbsp;0.47 | 84.53&nbsp;±&nbsp;1.20 |
 
 ## Installation
 

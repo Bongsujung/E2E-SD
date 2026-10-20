@@ -1,0 +1,5 @@
+# Ablation of the non-speech frames in training (App. C): non-speech inside a segment takes the
+# class of that segment.
+base: ../e2esd.yaml
+data:
+  nonspeech: inherit

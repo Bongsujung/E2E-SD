@@ -1,0 +1,6 @@
+# Ablation of the localization supervision (App. C): L_bin, a bonafide / spoof BCE on
+# w_b * cos(e_t, a_0) + b_b. L_bin uses every labeled frame (non-speech included) of the utterances
+# that contain bonafide.
+base: ../e2esd.yaml
+loss:
+  lambda_bin: 1.0

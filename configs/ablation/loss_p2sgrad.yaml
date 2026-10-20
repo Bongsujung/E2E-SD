@@ -1,0 +1,5 @@
+# Ablation of the assignment loss (App. C): P2SGrad, the MSE between the cosine similarity and the
+# one-hot targets.
+base: ../e2esd.yaml
+loss:
+  assign_loss: p2sgrad

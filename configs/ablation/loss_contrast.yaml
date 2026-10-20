@@ -1,0 +1,4 @@
+# Ablation of the assignment loss (App. C): GE2E contrast loss on the scaled similarity.
+base: ../e2esd.yaml
+loss:
+  assign_loss: contrast

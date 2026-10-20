@@ -1,0 +1,4 @@
+# Ablation of the existence training (App. C): a larger BCE weight for rare attractor slots.
+base: ../e2esd.yaml
+model:
+  weighted_exist_bce: true

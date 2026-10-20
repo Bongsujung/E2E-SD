@@ -1,0 +1,53 @@
+# Default config of E2E-SD (paper: main results, App. A.1).
+# Model: WavLM-Large (fine-tuned) + 5-layer gMLP + EDA. Loss: scaled CE.
+# Matching: a_0 fixed to bonafide.
+# Each config in frontend/ and ablation/ starts from this file and changes one setting.
+
+model:
+  ssl_model: wavlm_large        # wavlm_large | wav2vec2_large_lv_fsh_swbd_cv | wav2vec2_xlsr_300m
+  ssl_finetune: true            # train the SSL front-end with the learning rate of the back-end
+  backend: gmlp                 # gmlp | transformer | conformer
+  backend_layers: 5
+  backend_dropout: 0.1          # on the weighted SSL features (also inside transformer, conformer)
+  emb_dim: 512
+  n_heads: 8                    # transformer and conformer only
+  ff_dim: 2048                  # transformer and conformer only
+  conv_kernel: 31               # conformer only
+  time_shuffle: true            # shuffle the frames before the EDA encoder (training and inference)
+  weighted_exist_bce: false
+
+loss:
+  assign_loss: scaled_ce        # scaled_ce | ce | p2sgrad | contrast
+  w_init: 10.0                  # scaled similarity w * S + b (scaled_ce and contrast only)
+                                # w and b learn at 0.01x the learning rate.
+  b_init: -5.0
+  bona_match: fixed             # fixed: a_0 = bonafide, (K-1)! matching | free: K! matching
+  lambda_exist: 1.0
+  lambda_loc: 0.0               # > 0: separate localization head (ablation)
+  lambda_bin: 0.0               # > 0: L_bin on cos(e_t, a_0) (ablation)
+
+training:
+  epochs: 100
+  batch_size: 2
+  grad_accum: 4                 # effective batch size 8
+  lr: 1.0e-5
+  weight_decay: 1.0e-6
+  lr_decay_step: 10             # the learning rate halves every 10 epochs
+  lr_decay_gamma: 0.5
+  max_grad_norm: 3.0
+  patience: 5                   # stop when the dev loss does not improve for 5 epochs
+  balanced_sampling: false      # true: utterances with K >= 4 make `balanced_ratio` of each epoch
+  balanced_ratio: 0.2
+  num_workers: 4
+  seed: 777
+
+inference:
+  threshold: 0.5                # theta: K_hat = first k with p_k < theta
+  K_max: 8                      # largest K in the train and dev splits
+
+data:
+  db_root: data/PartialSpoof/database
+  vad_dir: vad_20sil            # directory of the label files under timestamps_v1.3
+  nonspeech: ignore             # ignore | inherit (non-speech takes the class of its segment)
+  frame_shift: 0.02
+  sample_rate: 16000

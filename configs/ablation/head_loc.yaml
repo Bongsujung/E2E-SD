@@ -1,0 +1,5 @@
+# Ablation of the localization supervision (App. C): a separate linear head with a BCE of class 0
+# (bonafide when present) against the other classes.
+base: ../e2esd.yaml
+loss:
+  lambda_loc: 1.0

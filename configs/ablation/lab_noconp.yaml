@@ -1,0 +1,5 @@
+# Concatenated-part class (Section 4.6): ConP gets the non-speech label. Thus, ConP has no class.
+# This config needs timestamps_v1.3/vad_20sil_noconp (scripts/prepare_partialspoof.py --noconp).
+base: ../e2esd.yaml
+data:
+  vad_dir: vad_20sil_noconp

@@ -1,0 +1,5 @@
+# Ablation of the bonafide anchoring (App. C): free matching over all K! class-to-attractor
+# assignments.
+base: ../e2esd.yaml
+loss:
+  bona_match: free

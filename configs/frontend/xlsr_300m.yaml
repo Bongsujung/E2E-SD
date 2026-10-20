@@ -1,0 +1,5 @@
+# Front-end control (main results): XLS-R 300M (Babu et al., 2022). The attractor-token models
+# (Koo et al., 2025) use SSL models of this family.
+base: ../e2esd.yaml
+model:
+  ssl_model: wav2vec2_xlsr_300m

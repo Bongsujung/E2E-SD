@@ -1,0 +1,5 @@
+# Front-end control (main results): wav2vec 2.0 Large, pre-trained on Libri-Light, CommonVoice,
+# Switchboard and Fisher. 3C (Zhang et al., 2024) uses this front-end.
+base: ../e2esd.yaml
+model:
+  ssl_model: wav2vec2_large_lv_fsh_swbd_cv

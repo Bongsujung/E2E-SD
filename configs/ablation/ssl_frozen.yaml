@@ -1,0 +1,5 @@
+# Ablation of the SSL front-end (App. C): WavLM-Large is frozen. Training updates all other
+# parameters. These include the SSL layer weights.
+base: ../e2esd.yaml
+model:
+  ssl_finetune: false

@@ -1,0 +1,4 @@
+# Ablation of the back-end (App. C): 5-layer pre-LN Transformer.
+base: ../e2esd.yaml
+model:
+  backend: transformer

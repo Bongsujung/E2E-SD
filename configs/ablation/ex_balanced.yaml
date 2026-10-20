@@ -1,0 +1,4 @@
+# Ablation of the existence training (App. C): utterances with K >= 4 make 20% of each epoch.
+base: ../e2esd.yaml
+training:
+  balanced_sampling: true

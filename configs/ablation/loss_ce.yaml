@@ -1,0 +1,4 @@
+# Ablation of the assignment loss (App. C): cross-entropy on the raw cosine similarity.
+base: ../e2esd.yaml
+loss:
+  assign_loss: ce

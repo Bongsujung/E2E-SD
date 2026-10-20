@@ -1,0 +1,4 @@
+# Ablation of the EDA time shuffle (App. C): the frames go into the EDA encoder in time order.
+base: ../e2esd.yaml
+model:
+  time_shuffle: false

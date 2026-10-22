@@ -105,7 +105,17 @@ bash scripts/run_transfer.sh exp/e2esd/s777 exp/sets
 
 ## Pre-trained models
 
-We will release the trained models in this repository.
+The default model (one run, seed 777, 1.4 GB) is on [Hugging Face](https://huggingface.co/GoutSIDE/E2E-SD).
+The checkpoint contains the SSL front-end. Thus, inference does not download other weights.
+
+```bash
+wget -P exp/e2esd/s777 https://huggingface.co/GoutSIDE/E2E-SD/resolve/main/best.pt
+python scripts/infer.py --checkpoint exp/e2esd/s777/best.pt --db-root $DB --split eval \
+    --out-dir exp/e2esd/s777/eval
+python scripts/evaluate.py --infer-dir exp/e2esd/s777/eval --db-root $DB --split eval
+```
+
+`exp/e2esd/s777/eval/results.json` gives the expected results.
 
 ## Citation
 

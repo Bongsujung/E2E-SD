@@ -1,0 +1,50 @@
+{
+  "model": {
+    "ssl_model": "wavlm_large",
+    "ssl_finetune": true,
+    "backend": "gmlp",
+    "backend_layers": 5,
+    "backend_dropout": 0.1,
+    "emb_dim": 512,
+    "n_heads": 8,
+    "ff_dim": 2048,
+    "conv_kernel": 31,
+    "time_shuffle": true,
+    "weighted_exist_bce": false
+  },
+  "loss": {
+    "assign_loss": "scaled_ce",
+    "w_init": 10.0,
+    "b_init": -5.0,
+    "bona_match": "fixed",
+    "lambda_exist": 1.0,
+    "lambda_loc": 0.0,
+    "lambda_bin": 0.0
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 2,
+    "grad_accum": 4,
+    "lr": 1e-05,
+    "weight_decay": 1e-06,
+    "lr_decay_step": 10,
+    "lr_decay_gamma": 0.5,
+    "max_grad_norm": 3.0,
+    "patience": 5,
+    "balanced_sampling": false,
+    "balanced_ratio": 0.2,
+    "num_workers": 4,
+    "seed": 777
+  },
+  "inference": {
+    "threshold": 0.5,
+    "K_max": 8
+  },
+  "data": {
+    "db_root": "./data/PartialSpoof/database",
+    "vad_dir": "vad_20sil",
+    "nonspeech": "ignore",
+    "frame_shift": 0.02,
+    "sample_rate": 16000
+  }
+}

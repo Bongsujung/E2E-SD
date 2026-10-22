@@ -1,0 +1,17 @@
+=== E2E-SD training started 2026-10-20 23:00:19 ===
+device cuda | train 25380 utterances, dev 24844 | train K: {1: 2580, 2: 6544, 3: 15255, 4: 596, 5: 288, 6: 99, 7: 15, 8: 3}
+344,163,099 parameters | bona_match=fixed
+Epoch 1/100 | train: total=0.32001 assign=0.17046 exist=0.14955 loc=0.00000 bin=0.00000 | dev: total=0.14094 assign=0.07892 exist=0.06201 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2065s | best
+Epoch 2/100 | train: total=0.09366 assign=0.05838 exist=0.03529 loc=0.00000 bin=0.00000 | dev: total=0.08103 assign=0.05230 exist=0.02873 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2210s | best
+Epoch 3/100 | train: total=0.06435 assign=0.04129 exist=0.02305 loc=0.00000 bin=0.00000 | dev: total=0.10477 assign=0.04794 exist=0.05684 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2230s
+Epoch 4/100 | train: total=0.05070 assign=0.03358 exist=0.01712 loc=0.00000 bin=0.00000 | dev: total=0.07821 assign=0.04507 exist=0.03315 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2230s | best
+Epoch 5/100 | train: total=0.04005 assign=0.02721 exist=0.01285 loc=0.00000 bin=0.00000 | dev: total=0.10454 assign=0.05512 exist=0.04942 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2241s
+Epoch 6/100 | train: total=0.03177 assign=0.02220 exist=0.00957 loc=0.00000 bin=0.00000 | dev: total=0.08265 assign=0.04370 exist=0.03895 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2245s
+Epoch 7/100 | train: total=0.02551 assign=0.01777 exist=0.00774 loc=0.00000 bin=0.00000 | dev: total=0.07366 assign=0.04045 exist=0.03321 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2242s | best
+Epoch 8/100 | train: total=0.02244 assign=0.01578 exist=0.00666 loc=0.00000 bin=0.00000 | dev: total=0.08411 assign=0.04484 exist=0.03927 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2245s
+Epoch 9/100 | train: total=0.01706 assign=0.01185 exist=0.00521 loc=0.00000 bin=0.00000 | dev: total=0.07623 assign=0.04281 exist=0.03342 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2233s
+Epoch 10/100 | train: total=0.01418 assign=0.01019 exist=0.00399 loc=0.00000 bin=0.00000 | dev: total=0.09836 assign=0.04736 exist=0.05100 loc=0.00000 bin=0.00000 | lr=1.00e-05 | 2256s
+Epoch 11/100 | train: total=0.00802 assign=0.00583 exist=0.00219 loc=0.00000 bin=0.00000 | dev: total=0.08288 assign=0.04884 exist=0.03404 loc=0.00000 bin=0.00000 | lr=5.00e-06 | 2248s
+Epoch 12/100 | train: total=0.00469 assign=0.00364 exist=0.00106 loc=0.00000 bin=0.00000 | dev: total=0.08679 assign=0.05331 exist=0.03348 loc=0.00000 bin=0.00000 | lr=5.00e-06 | 2247s
+stopped after 12 epochs; best dev loss 0.073657
+=== training finished after 7.4 h ===

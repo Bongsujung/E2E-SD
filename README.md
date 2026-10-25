@@ -84,7 +84,7 @@ python scripts/evaluate.py --infer-dir exp/e2esd/s777/eval --db-root $DB --split
 ```
 
 To get the mean ± std over runs, use `python scripts/summarize.py exp/e2esd/s* --sub eval`.
-One run takes 5-7 h on one NVIDIA RTX 4090 and uses approximately 17 GB of GPU memory.
+One run takes approximately 6 h on one NVIDIA RTX 4090 and uses approximately 17 GB of GPU memory.
 
 ## Transfer and detection
 

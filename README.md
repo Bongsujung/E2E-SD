@@ -109,6 +109,7 @@ The default model (one run, seed 777, 1.4 GB) is on [Hugging Face](https://huggi
 The checkpoint contains the SSL front-end. Thus, inference does not download other weights.
 
 ```bash
+wget -O exp/e2esd/s777/config.json https://huggingface.co/GoutSIDE/E2E-SD/resolve/main/config.json
 wget -P exp/e2esd/s777 https://huggingface.co/GoutSIDE/E2E-SD/resolve/main/best.pt
 python scripts/infer.py --checkpoint exp/e2esd/s777/best.pt --db-root $DB --split eval \
     --out-dir exp/e2esd/s777/eval
